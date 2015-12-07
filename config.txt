@@ -1,0 +1,37 @@
+[HIT Configuration]
+title = Word meaning
+description = Judge the meaning of different words.
+amt_keywords = Language, Psychology
+lifetime = 24
+us_only = true
+approve_requirement = 95
+contact_email_on_error = your_email@your_address.whatever
+ad_group = KRNS Semantic Feature Rating
+psiturk_keywords = semantics, feature rating
+organization_name = New York University/UPenn
+browser_exclude_rule = MSIE, mobile, tablet
+using_sandbox = True
+
+[Database Parameters]
+database_url = 
+table_name = krns_feature_rating_v1_participant
+
+[Server Parameters]
+host = 0.0.0.0
+port = 22362
+cutoff_time = 30
+logfile = server.log
+loglevel = 0
+debug = true
+login_username = examplename
+login_pw = examplepassword
+threads = auto
+
+[Task Parameters]
+experiment_code_version = 1.0
+num_conds = 1
+num_counters = 1
+
+[Shell Parameters]
+always_launch_in_sandbox = true
+

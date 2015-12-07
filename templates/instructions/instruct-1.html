@@ -1,0 +1,140 @@
+<div id="container-instructions">
+
+    <h1>Hello and welcome!</h1>
+
+    <hr>
+
+    <div class="instructions well">
+         <p>
+            Thank you for contributing your time to our research.
+        </p>
+
+        <p>
+            Today you will see a series of words and think about their characteristics or qualities.
+        </p>
+
+        <p>
+            On each page you will see a word and its' definition like this:
+        </p>
+    </div>
+    
+    <div class="container" id="mcontainer">
+        <div id="jumbodiv">
+            <div class="jumbotron" id="jumbotron1">
+                <h1 id="theword"></h1>
+                <h3 id="thesentence"></h3>
+            </div>
+        </div>
+        <div id="sliderdiv"></div>
+        <div id="buttondiv"></div>
+    </div>
+
+    <div class="instructions well">
+        <p>
+            You should read the word and definition and think about the meaning of the word.
+        </p>
+    </div>
+
+    <script type="text/javascript">
+    scroll(0,0)
+    //console.log(psiTurk.getInstructionIndicator())
+    </script>
+
+
+    <hr>
+
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <!-- no previous button on first screen -->
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
+                    Next
+                    <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/static/js/instruct.js"></script>
+    <script type="text/javascript">
+    // var r = 99;
+    // var low_anch = "not at all"
+    // var mid_anch = "somewhat"
+    // var high_anch = "very much so"
+    // var feature_text = ""
+
+    // d3.select("#theword").html("hi");
+    // d3.select("#thesentence").html("Comment va tu?");
+    // /// add button
+    // d3.select("#buttondiv")
+    //     .append("a")
+    //     .attr("class", "btn btn-primary btn-lg pull-right")
+    //     .attr("role", "button")
+    //     .attr("id", "thebutton")
+    //     .html("Next word &raquo;")
+    //     .on("click", function() {
+    //             // save data here
+    //             //psiturk.recordTrialData(['this':1, 'is', 1, 'line'])
+    //             callback();
+
+
+
+    // slidertron = d3.select("#sliderdiv")
+    //     .append("div")
+    //     .attr("id", "slidertron" + r)
+    //     .attr("class", "slidertron");
+
+    // slidertron.append("p").attr("id", "feat" + r).html(feature_text);
+    // slidertron.append("div")
+    //     .attr("class", "ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all")
+    //     .attr("id", "slider" + r);
+
+    // $(function() {
+    //     $("#slider" + r).slider({
+    //         range: "min",
+    //         value: 0,
+    //         min: 1,
+    //         max: 100,
+    //         step: 1
+    //         // range:"min",
+    //         // animate: true
+    //         // slide: function( event, ui ) {
+    //         //     $( "#amount" ).val( "$" + ui.value );
+    //         // }
+    //     });
+    // });
+
+    // stepdiv = slidertron.append("div")
+    //     .attr("class", "steps");
+
+    // stepdiv.append("div")
+    //     .attr("class", "tick")
+    //     .attr("id", "lowtick")
+    //     .style("position", "absolute")
+    //     .html(low_anch);
+
+    // stepdiv.append("div")
+    //     .attr("class", "tick")
+    //     .attr("id", "midtick")
+    //     .style("position", "absolute")
+    //     .style("left", "44%")
+    //     .html(mid_anch);
+
+
+    // stepdiv.append("div")
+    //     .attr("class", "tick")
+    //     .attr("id", "hightick")
+    //     .style("position", "absolute")
+    //     .style("left", "92%")
+    //     .style("text-align", "right")
+    //     .html(high_anch);
+    </script>
+
+
+</div>

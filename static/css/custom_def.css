@@ -1,0 +1,199 @@
+/* Adjust the top and bottom buffer from jumbotron-narrow.css [def top:20; bottom;20] */
+ body {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+/*modify some of the jumbotron spacings from bootstrap.css*/
+ .jumbotron {
+    padding-top: 20px;
+    padding-bottom: 18px;
+    /*margin-bottom: 2px;*/
+    color: inherit;
+    background-color: #eee;
+}
+
+#jumbotron2 {
+        margin-top: 2px;
+margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 5px;
+        padding-bottom: 5px;
+}
+
+#jumbotron1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 5px;
+        padding-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container .jumbotron {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    .jumbotron h1, .jumbotron .h1 {
+        font-size: 63px;
+    }
+}
+/*make a new box for the sliders and features. Cloned from the jumbotron*/
+ .slidertron {
+    padding: 30px;
+    margin-bottom: 10px;
+    color: inherit;
+    background-color:#E3EFFC;
+    border-top: 2px solid #C2C2C2;
+    border-bottom: 2px solid #C2C2C2;
+    border-left: 2px solid #C2C2C2;
+    border-right: 2px solid #C2C2C2;
+    ;
+}
+.slidertron h1, .slidertron .h1 {
+    color: inherit;
+}
+.slidertron p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+.container .slidertron {
+    border-radius: 6px;
+}
+.slidertron .container {
+    max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .slidertron {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .container .slidertron {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    .slidertron h1, .slidertron .h1 {
+        font-size: 63px;
+    }
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#promptdiv {
+        margin-bottom: 15px;
+    
+
+}
+/* #slider {
+    float: left;
+    clear: left;
+    width: 600px;
+    margin: 15px;
+  }
+*/
+
+/* #swatch {
+    width: 120px;
+    height: 100px;
+    margin-top: 18px;
+    margin-left: 350px;
+    background-image: none;
+  }
+*/
+ #slider .ui-slider-range-min {
+    background: #444444;
+}
+
+ #slider1 .ui-slider-range-min {
+    background: #444444;
+}
+ #slider2 .ui-slider-range-min {
+    background: #444444;
+}
+
+ #slider0 .ui-slider-range-min {
+    background: #444444;
+}
+
+ #slider3 .ui-slider-range-min {
+    background: #444444;
+}
+
+ #slider4 .ui-slider-range-min {
+    background: #444444;
+}
+
+ #slider5 .ui-slider-range-min {
+    background: #444444;
+}
+
+ #slider99 .ui-slider-range-min {
+    background: #444444;
+}
+
+ #slider100 .ui-slider-range-min {
+    background: #444444;
+}
+
+/*#myslide .ui-slider-handle { border-color: #808080; }*/
+ .ui-slider-horizontal .ui-slider-handle {
+    margin-left:-0.2em;
+    top:-0.5em;
+    display:none;
+}
+.ui-slider .ui-slider-handle {
+    cursor:default;
+    height:.05em;
+    position:default;
+    width:0.8em;
+    z-index:2;
+}
+#slider2 .ui-slider-range-min {
+    background: #444444;
+}
+/*#myslide .ui-slider-handle { border-color: #808080; }*/
+ .ui-slider-horizontal .ui-slider-handle {
+    margin-left:-0.2em;
+    top:-0.5em;
+    display:none;
+}
+.ui-slider .ui-slider-handle {
+    cursor:default;
+    height:.05em;
+    position:default;
+    width:0.8em;
+    z-index:2;
+}
+
+
+
+
+.steps {
+    border: 1px solid transparent;
+    /*follows #slider2 style for sizing purposes */
+    width: relative;
+    position: relative;
+    height: 25px;
+    font-style: italic;
+}
+.tick {
+    border: 1px solid transparent;
+    /*follows slide handle style for sizing purposes*/
+    position: absolute;
+    width: 18%;
+    margin-left: -.6em;
+    /*text-align:center;*/
+    /*left: 100px;*/
+}

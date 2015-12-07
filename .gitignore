@@ -1,0 +1,11 @@
+/.DS_Store
+/.psiturk_history
+/custom.pyc
+/custom_models.pyc
+/server.log
+
+/build/
+
+/participants_testing.db
+
+.DS_Store

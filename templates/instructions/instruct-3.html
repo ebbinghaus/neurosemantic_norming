@@ -1,0 +1,223 @@
+<div id="container-instructions">
+
+    <h1>Rating words and features</h1>
+
+    <!-- <hr> -->
+    <div class="instructions well">
+        <p>
+            For each word you will make several ratings. You should rate each feature in the list and then press next to continue.
+        </p>
+    </div>
+
+    <div class="instructions well">
+        <p>
+            Giving a high or low rating to one feature does not mean that you cannot give similar ratings to other features. 
+        </p>
+        <p>
+            For example, a person who saw the word banana might rate it as being very associated with a certain <strong>shape</strong> and a certain <strong>taste</strong> and not at all related to <strong>emotions</strong>. Here's how that would look.
+        </p>
+    </div>
+
+    <script type="text/javascript">
+    scroll(0,0)
+    //console.log(psiTurk.getInstructionIndicator())
+    </script>
+
+
+    <div class="container" id="mcontainer">
+        <div id="jumbodiv">
+            <div class="jumbotron" id="jumbotron1">
+                <h1 id="theword"></h1>
+                <h3 id="thesentence"></h3>
+            </div>
+        </div>
+        <div id="sliderdiv"></div>
+        <div id="buttondiv"></div>
+    </div>
+
+    <hr>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg previous">
+                    <span class="glyphicon glyphicon-arrow-left"></span>Previous
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
+                    Next
+                    <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../static/js/instruct.js"></script>
+    <script type="text/javascript">
+    
+    var r = 97;
+    var low_anch = "not at all"
+    var mid_anch = "somewhat"
+    var high_anch = "very much so"
+    var feature_text = ""
+
+    slidertron = d3.select("#sliderdiv")
+        .append("div")
+        .attr("id", "slidertron" + r)
+        .attr("class", "slidertron");
+
+    slidertron.append("p").attr("id", "feat" + r).html("Makes me think of a <strong>certain shape or appearance</strong>.");
+    slidertron.append("div")
+        .attr("class", "ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all")
+        .attr("id", "slider" + r);
+
+    $(function() {
+        $("#slider" + r).slider({
+            range: "min",
+            value: 90,
+            min: 1,
+            max: 100,
+            step: 1,
+            disabled: false
+            // range:"min",
+            // animate: false
+            // slide: function( event, ui ) {
+            //     $( "#amount" ).val( "$" + ui.value );
+            // }
+        });
+    });
+
+    stepdiv = slidertron.append("div")
+        .attr("class", "steps");
+
+    stepdiv.append("div")
+        .attr("class", "tick")
+        .attr("id", "lowtick")
+        .style("position", "absolute")
+        .html(low_anch);
+
+    stepdiv.append("div")
+        .attr("class", "tick")
+        .attr("id", "midtick")
+        .style("position", "absolute")
+        .style("left", "44%")
+        .html(mid_anch);
+
+
+    stepdiv.append("div")
+        .attr("class", "tick")
+        .attr("id", "hightick")
+        .style("position", "absolute")
+        .style("left", "88%")
+        .style("text-align", "right")
+        .html(high_anch);
+
+
+    var r = 98
+    slidertron = d3.select("#sliderdiv")
+        .append("div")
+        .attr("id", "slidertron" + r)
+        .attr("class", "slidertron");
+
+    slidertron.append("p").attr("id", "feat" + r).html("Makes me think of a <strong>certain taste</strong>.");
+    slidertron.append("div")
+        .attr("class", "ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all")
+        .attr("id", "slider" + r);
+
+    $(function() {
+        $("#slider" + r).slider({
+            range: "min",
+            value: 99,
+            min: 1,
+            max: 100,
+            step: 1,
+            disabled: false
+            // range:"min",
+            // animate: true
+            // slide: function( event, ui ) {
+            //     $( "#amount" ).val( "$" + ui.value );
+            // }
+        });
+    });
+
+    stepdiv = slidertron.append("div")
+        .attr("class", "steps");
+
+    stepdiv.append("div")
+        .attr("class", "tick")
+        .attr("id", "lowtick")
+        .style("position", "absolute")
+        .html(low_anch);
+
+    stepdiv.append("div")
+        .attr("class", "tick")
+        .attr("id", "midtick")
+        .style("position", "absolute")
+        .style("left", "44%")
+        .html(mid_anch);
+
+    stepdiv.append("div")
+        .attr("class", "tick")
+        .attr("id", "hightick")
+        .style("position", "absolute")
+        .style("left", "88%")
+        .style("text-align", "right")
+        .html(high_anch);
+
+   var r = 101
+    slidertron = d3.select("#sliderdiv")
+        .append("div")
+        .attr("id", "slidertron" + r)
+        .attr("class", "slidertron");
+
+    slidertron.append("p").attr("id", "feat" + r).html("Related to <strong>emotions</strong>.");
+    slidertron.append("div")
+        .attr("class", "ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all")
+        .attr("id", "slider" + r);
+
+    $(function() {
+        $("#slider" + r).slider({
+            range: "min",
+            value: 3,
+            min: 1,
+            max: 100,
+            step: 1,
+            disabled: false
+            // range:"min",
+            // animate: true
+            // slide: function( event, ui ) {
+            //     $( "#amount" ).val( "$" + ui.value );
+            // }
+        });
+    });
+
+    stepdiv = slidertron.append("div")
+        .attr("class", "steps");
+
+    stepdiv.append("div")
+        .attr("class", "tick")
+        .attr("id", "lowtick")
+        .style("position", "absolute")
+        .html(low_anch);
+
+    stepdiv.append("div")
+        .attr("class", "tick")
+        .attr("id", "midtick")
+        .style("position", "absolute")
+        .style("left", "44%")
+        .html(mid_anch);
+
+
+    stepdiv.append("div")
+        .attr("class", "tick")
+        .attr("id", "hightick")
+        .style("position", "absolute")
+        .style("left", "88%")
+        .style("text-align", "right")
+        .html(high_anch);
+    </script>
+</div>
